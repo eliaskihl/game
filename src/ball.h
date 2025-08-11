@@ -4,6 +4,7 @@ class Ball
 {
 public:
     Ball();
+    Ball(int startX, int startY, int sX, int sY, int rad);
     void Update();
     void Draw() const;
 

@@ -9,6 +9,10 @@ Ball::Ball()
     , radius(15) 
 {
 }
+Ball::Ball(int startX, int startY, int sX, int sY, int r)
+    : x(startX), y(startY), speedX(sX), speedY(sY), radius(r)
+{
+}
 
 void Ball::Update() 
 {
