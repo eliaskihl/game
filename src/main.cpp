@@ -1,5 +1,6 @@
 #include <raylib.h>
 #include "ball.h"
+#include <iostream>
 
 int main() 
 {
@@ -10,7 +11,7 @@ int main()
     
     Ball ball;
     Ball ball2;
-    ball2 = Ball(10,10,2,2,10);
+    ball2 = Ball(10,10,2,2,10, true);
     
     InitWindow(screenWidth, screenHeight, "This is the title.");
     SetTargetFPS(60);
@@ -24,6 +25,10 @@ int main()
             ClearBackground(darkGreen);
             ball.Draw();
             ball2.Draw();
+            if (ball.IsCollidingWith(ball2)) {
+                std::cout << "help\n";
+                // handle collision, e.g., reverse speeds or bounce
+            }
         EndDrawing();
     }
     
